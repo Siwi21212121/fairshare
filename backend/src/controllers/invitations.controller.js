@@ -49,12 +49,13 @@ async function sendInvitationEmail({ to, group, inviter, role, token }) {
   });
 
   if (!response.ok) {
-    const detail = await response.text();
-    console.error('Email provider error:', detail);
-    const err = new Error('The invitation was created, but the email could not be sent. Check your email settings.');
-    err.status = 502;
-    throw err;
-  }
+  const detail = await response.text();
+  console.error('Email provider error:', detail);
+  return {
+    sent: false,
+    inviteUrl,
+  };
+}
 
   return { sent: true, inviteUrl };
 }
