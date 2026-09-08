@@ -75,7 +75,6 @@ export default function Landing() {
         </nav>
 
         <section className="hero">
-          <div className="eyebrow-badge">{icons.explain} Every settlement, fully explained</div>
           <h1>
             Split money.
             <br />
@@ -102,7 +101,7 @@ export default function Landing() {
               <div className="fc-amt">₹1,500 each</div>
             </div>
             <div className="float-card card" style={{ top: 130, left: '20%', animationDelay: '2.1s' }}>
-              <div className="fc-title">B → J</div>
+              <div className="fc-title">Person A → Person B</div>
               <div className="fc-amt" style={{ color: 'var(--accent)' }}>
                 ₹5,050
               </div>
